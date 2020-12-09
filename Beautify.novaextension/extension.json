@@ -1,0 +1,32 @@
+{
+  "identifier": "patrickvuarnoz.beautify",
+  "name": "Beautify",
+  "organization": "Patrick A. Vuarnoz",
+  "description": "Lorem ipsum, dolor sit amet.",
+  "version": "1.0",
+  "categories": ["commands"],
+
+  "main": "main.js",
+
+  "activationEvents": [
+    "onLanguage:javascript"
+  ],
+
+  "entitlements": {
+
+  },
+
+  "commands": {
+    "editor": [{
+        "title": "Format",
+        "command": "beautify.format",
+        "shortcut": "opt-shift-f"
+
+      },
+      {
+        "title": "Format selection",
+        "command": "beautify.formatSelection"
+      }
+    ]
+  }
+}
