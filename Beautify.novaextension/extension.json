@@ -3,7 +3,7 @@
   "name": "Beautify",
   "organization": "Patrick A. Vuarnoz",
   "description": "Format Javascript, CSS, HTML and similar syntaxes using JS-Beautify.",
-  "version": "1.0",
+  "version": "1.0.1",
   "categories": ["formatters", "commands"],
   
   "main": "main.js",
