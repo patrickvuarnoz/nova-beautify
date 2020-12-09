@@ -2,14 +2,14 @@
   "identifier": "patrickvuarnoz.beautify",
   "name": "Beautify",
   "organization": "Patrick A. Vuarnoz",
-  "description": "Lorem ipsum, dolor sit amet.",
+  "description": "Format Javascript, CSS, HTML and similar syntaxes using JS-Beautify.",
   "version": "1.0",
-  "categories": ["commands"],
-
+  "categories": ["formatters", "commands"],
+  
   "main": "main.js",
 
-  "activationEvents": [
-    "onLanguage:javascript"
+  "activationEvents": [ 
+
   ],
 
   "entitlements": {
@@ -19,14 +19,26 @@
   "commands": {
     "editor": [{
         "title": "Format",
+        "paletteTitle": "Format",
         "command": "beautify.format",
-        "shortcut": "opt-shift-f"
-
+        "shortcut": "opt-shift-f",
+        "when": "editorHasFocus",
+        "filters": {
+            "syntaxes": ["javascript", "typescript", "json", "css", "less", "scss", "html", "xml", "svg"]
+        }
       },
       {
         "title": "Format selection",
-        "command": "beautify.formatSelection"
+        "paletteTitle": "Format selection",
+        "command": "beautify.formatSelection",
+        "when": "editorHasFocus && editorHasSelection",
+        "filters": {
+            "syntaxes": ["javascript", "typescript", "json", "css", "less", "scss", "html", "xml", "svg"]
+        }
       }
     ]
-  }
+  },
+  
+  "bugs": "https://github.com/patrickvuarnoz/nova-beautify/issues",
+  "repository": "https://github.com/patrickvuarnoz/nova-beautify"
 }

@@ -33,24 +33,24 @@ exports.beautify = function (editor, ranges) {
       var beautified = '';
       
       switch (syntax) {
-        case "javascript":
-        case "json":
+        case 'javascript':
+        case 'json':
           beautified = beautifier.js(text, options);
           break;
           
-        case "css":
-        case "less":
-        case "scss":
+        case 'css':
+        case 'less':
+        case 'scss':
           beautified = beautifier.css(text, options);
           break;
           
-        case "html":
-        case "xml":
-        case "svg":
+        case 'html':
+        case 'xml':
           beautified = beautifier.html(text, options);
           break;
           
         default:
+          console.log('Syntax ' + syntax + ' not supported');
           beautified = text;
           break;  
       }
@@ -62,16 +62,16 @@ exports.beautify = function (editor, ranges) {
 
 
 
-// Invoked by the "format" command
-nova.commands.register("beautify.format", (editor) => {
+// Invoked by the 'format' command
+nova.commands.register('beautify.format', (editor) => {
   exports.beautify(editor, [new Range(0, editor.document.length)]);
   //editor.scrollToPosition(0);
 });
 
 
 
-// Invoked by the "format selection" command
-nova.commands.register("beautify.formatSelection", (editor) => {
+// Invoked by the 'format selection' command
+nova.commands.register('beautify.formatSelection', (editor) => {
   exports.beautify(editor, editor.selectedRanges.reverse());
 });
 
