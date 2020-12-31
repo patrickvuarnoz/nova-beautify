@@ -65,7 +65,6 @@ exports.beautify = function (editor, ranges) {
 // Invoked by the 'format' command
 nova.commands.register('beautify.format', (editor) => {
   exports.beautify(editor, [new Range(0, editor.document.length)]);
-  //editor.scrollToPosition(0);
 });
 
 

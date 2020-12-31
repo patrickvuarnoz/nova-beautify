@@ -2,8 +2,8 @@
   "identifier": "patrickvuarnoz.beautify",
   "name": "Beautify",
   "organization": "Patrick A. Vuarnoz",
-  "description": "Format Javascript, CSS, HTML and similar syntaxes using JS-Beautify.",
-  "version": "1.0.2",
+  "description": "Format Javascript, JSON, CSS, SCSS, LESS, HTML and XML using JS-Beautify.",
+  "version": "1.0.3",
   "categories": ["formatters", "commands"],
   
   "main": "main.js",
