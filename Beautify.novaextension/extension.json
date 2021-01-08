@@ -5,10 +5,10 @@
   "description": "Format Javascript, JSON, CSS, SCSS, LESS, HTML and XML using JS-Beautify.",
   "version": "1.0.3",
   "categories": ["formatters", "commands"],
-  
+
   "main": "main.js",
 
-  "activationEvents": [ 
+  "activationEvents": [
 
   ],
 
@@ -16,15 +16,60 @@
 
   },
 
+  "config": [
+    {
+      "title": "Javascript & JSON",
+      "type": "section",
+      "link": "https://github.com/beautify-web/js-beautify#options",
+      "children": [
+      ]
+    },
+    {
+      "title": "CSS, SCSS & LESS",
+      "type": "section",
+      "link": "https://github.com/beautify-web/js-beautify#css--html",
+      "children": [
+        {
+          "key": "patrickvuarnoz.beautify.css.brace_style",
+          "title": "Brace style",
+          "type": "enum",
+          "values": ["collapse", "expand"],
+          "default": "collapse"
+        },
+        {
+          "key": "patrickvuarnoz.beautify.css.selector_separator_newline",
+          "title": "Add a newline between multiple selectors",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "key": "patrickvuarnoz.beautify.css.newline_between_rules",
+          "title": "Add a newline between rules",
+          "type": "boolean",
+          "default": true
+        }
+      ]
+    },
+    {
+      "title": "HTML & XML",
+      "type": "section",
+      "link": "https://github.com/beautify-web/js-beautify#css--html",
+      "children": [
+      ]
+    },
+    
+  ],
+
   "commands": {
-    "editor": [{
+    "editor": [
+      {
         "title": "Format",
         "paletteTitle": "Format",
         "command": "beautify.format",
         "shortcut": "opt-shift-f",
         "when": "editorHasFocus",
         "filters": {
-            "syntaxes": ["javascript", "typescript", "json", "css", "less", "scss", "html", "xml", "svg"]
+          "syntaxes": ["javascript", "typescript", "json", "css", "less", "scss", "html", "xml", "svg"]
         }
       },
       {
@@ -33,12 +78,12 @@
         "command": "beautify.formatSelection",
         "when": "editorHasFocus && editorHasSelection",
         "filters": {
-            "syntaxes": ["javascript", "typescript", "json", "css", "less", "scss", "html", "xml", "svg"]
+          "syntaxes": ["javascript", "typescript", "json", "css", "less", "scss", "html", "xml", "svg"]
         }
       }
     ]
   },
-  
+
   "bugs": "https://github.com/patrickvuarnoz/nova-beautify/issues",
   "repository": "https://github.com/patrickvuarnoz/nova-beautify"
 }
