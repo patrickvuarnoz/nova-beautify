@@ -101,7 +101,7 @@
           "title": "Preserve existing line-breaks",
           "type": "boolean",
           "default": true
-        },
+        }
       ]
     },
     {
@@ -134,7 +134,7 @@
           "title": "Preserve existing line-breaks",
           "type": "boolean",
           "default": true
-        },
+        }
       ]
     },
     {
@@ -183,10 +183,9 @@
           "title": "Preserve existing line-breaks",
           "type": "boolean",
           "default": true
-        },
+        }
       ]
-    },
-    
+    }
   ],
 
   "commands": {
