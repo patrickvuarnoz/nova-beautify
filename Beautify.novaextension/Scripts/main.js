@@ -4,9 +4,35 @@ const beautifier = require('../Vendor/beautifier.min.js');
 
 
 // Config options that are being read
-const configjs = [];
-const configCss = ['brace_style', 'selector_separator_newline', 'newline_between_rules'];
-const configHtml = [];
+const configJs = [
+  'brace_style', 
+  'brace_style_preserve_inline', 
+  'space_in_paren',
+  'space_in_empty_paren',
+  'space_after_anon_function',
+  'space_after_named_function',
+  'space_before_conditional',
+  'unindent_chained_methods',
+  'break_chained_methods',
+  'unescape_strings',
+  'comma_first',
+  'keep_array_indentation',
+  'preserve_newlines',
+];
+const configCss = [
+  'brace_style', 
+  'selector_separator_newline', 
+  'newline_between_rules',
+  'preserve_newlines',
+];
+const configHtml = [
+  'brace_style',
+  'wrap_attributes',
+  'wrap_attributes_indent_size',
+  'indent_scripts',
+  'indent_inner_html',
+  'preserve_newlines',
+];
 
 
 
@@ -27,7 +53,6 @@ exports.deactivate = function () {
 // Beautify the current selection
 exports.beautify = function (editor, ranges) {
   editor.edit(function (e) {
-
     var syntax  = editor.document.syntax;
     var options = {
       indent_char: editor.tabText.charAt(0),
@@ -37,10 +62,14 @@ exports.beautify = function (editor, ranges) {
     };
     
     switch (syntax) {
+      case 'typescript':
       case 'javascript':
       case 'json':
         for (option of configJs) {
           options[option] = nova.config.get('patrickvuarnoz.beautify.js.' + option);
+        }
+        if (options.brace_style_preserve_inline) {
+          options.brace_style += ',preserve-inline'; 
         }
         for (var range of ranges) {
           var text = editor.getTextInRange(range);
@@ -55,7 +84,6 @@ exports.beautify = function (editor, ranges) {
         for (option of configCss) {
           options[option] = nova.config.get('patrickvuarnoz.beautify.css.' + option);
         }
-        options.preserve_newlines = false;
         for (var range of ranges) {
           var text = editor.getTextInRange(range);
           var beautified = beautifier.css(text, options);
@@ -68,6 +96,8 @@ exports.beautify = function (editor, ranges) {
         for (option of configHtml) {
           options[option] = nova.config.get('patrickvuarnoz.beautify.html.' + option);
         }
+        options.wrap_line_length = 0;
+        options.wrap_attributes_indent_size = options.wrap_attributes_indent_size ? options.indent_size : 0;
         for (var range of ranges) {
           var text = editor.getTextInRange(range);
           var beautified = beautifier.html(text, options);
