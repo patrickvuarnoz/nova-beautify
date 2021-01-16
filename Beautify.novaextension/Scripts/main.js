@@ -32,6 +32,9 @@ const configHtml = [
   'indent_scripts',
   'indent_inner_html',
   'preserve_newlines',
+  'unformatted',
+  'content_unformatted',
+  'extra_liners',
 ];
 
 

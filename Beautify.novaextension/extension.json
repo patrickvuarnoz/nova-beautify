@@ -3,7 +3,7 @@
   "name": "Beautify",
   "organization": "Patrick A. Vuarnoz",
   "description": "Format Javascript, JSON, CSS, SCSS, LESS, HTML and XML using JS-Beautify.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "categories": ["formatters", "commands"],
 
   "main": "main.js",
@@ -183,6 +183,27 @@
           "title": "Preserve existing line-breaks",
           "type": "boolean",
           "default": true
+        },
+        {
+          "key": "patrickvuarnoz.beautify.html.unformatted",
+          "title": "Unformatted tags",
+          "description": "List of tags that should not be reformatted, notation is without '<>', i.e. 'span'",
+          "type": "text",
+          "default": ""
+        },
+        {
+          "key": "patrickvuarnoz.beautify.html.content_unformatted",
+          "title": "Unformatted content",
+          "description": "List of tags whose content should not be reformatted, notation is without '<>', i.e. 'pre,textarea'",
+          "type": "text",
+          "default": "pre,textarea"
+        },
+        {
+          "key": "patrickvuarnoz.beautify.html.extra_liners",
+          "title": "Extra lines before",
+          "description": "List of tags that should have an extra line before them, notation is without '<>', i.e. 'head,body,/html'",
+          "type": "text",
+          "default": "head,body,/html"
         }
       ]
     }
