@@ -22,5 +22,5 @@ formatting Javascript, JSON, CSS, SCSS, LESS, HTML and XML.
 
 ## Screenshots
 
-![](https://github.com/patrickvuarnoz/nova-beautify/raw/master/Beautify.novaextension/screenshot.png)
+![](https://github.com/patrickvuarnoz/nova-beautify/raw/master/screenshots/screenshot.png)
 
