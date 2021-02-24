@@ -1,6 +1,10 @@
+## Version 1.3
+
+* Added config options for 'add spaces around combinators' (CSS, SCSS & LESS)
+
 ## Version 1.2
 
-* Add config options for 'unformatted tags', 'unformatted content' and 'extra lines before'
+* Added config options for 'unformatted tags', 'unformatted content' and 'extra lines before' (HTML & XML)
 
 
 ## Version 1.1

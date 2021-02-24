@@ -3,7 +3,7 @@
   "name": "Beautify",
   "organization": "Patrick A. Vuarnoz",
   "description": "Format Javascript, JSON, CSS, SCSS, LESS, HTML and XML using JS-Beautify.",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "categories": ["formatters", "commands"],
 
   "main": "main.js",
@@ -38,7 +38,7 @@
         },
         {
           "key": "patrickvuarnoz.beautify.js.space_in_paren",
-          "title": "Add padding spaces within paren, i.e. f( a, b )",
+          "title": "Add spaces within paren, i.e. f( a, b )",
           "type": "boolean",
           "default": false
         },
@@ -118,6 +118,12 @@
           "default": "collapse"
         },
         {
+          "key": "patrickvuarnoz.beautify.css.space_around_combinator",
+          "title": "Add spaces around combinators, i.e. .foo > .bar",
+          "type": "boolean",
+          "default": false
+        },
+        {
           "key": "patrickvuarnoz.beautify.css.selector_separator_newline",
           "title": "Add a newline between multiple selectors",
           "type": "boolean",
@@ -132,12 +138,6 @@
         {
           "key": "patrickvuarnoz.beautify.css.preserve_newlines",
           "title": "Preserve existing line-breaks",
-          "type": "boolean",
-          "default": true
-        },
-        {
-          "key": "patrickvuarnoz.beautify.css.space_around_combinator",
-          "title": "Add space between combinators",
           "type": "boolean",
           "default": true
         }
