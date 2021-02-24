@@ -134,6 +134,12 @@
           "title": "Preserve existing line-breaks",
           "type": "boolean",
           "default": true
+        },
+        {
+          "key": "patrickvuarnoz.beautify.css.space_around_combinator",
+          "title": "Add space between combinators",
+          "type": "boolean",
+          "default": true
         }
       ]
     },
