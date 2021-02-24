@@ -24,6 +24,7 @@ const configCss = [
   'selector_separator_newline', 
   'newline_between_rules',
   'preserve_newlines',
+  'space_around_combinator',
 ];
 const configHtml = [
   'brace_style',
