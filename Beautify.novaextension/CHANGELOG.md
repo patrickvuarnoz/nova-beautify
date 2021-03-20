@@ -1,3 +1,9 @@
+## Version 1.4
+
+* Added commands to format as specific syntax
+* Removed `Format selection`
+* Automatically formats any selected text or the whole document if there was no selection
+
 ## Version 1.3
 
 * Added config options for 'add spaces around combinators' (CSS, SCSS & LESS)

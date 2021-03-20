@@ -55,15 +55,15 @@ exports.deactivate = function () {
 
 
 // Beautify the current selection
-exports.beautify = function (editor, ranges) {
+exports.beautify = function (editor, ranges, syntax) {
   editor.edit(function (e) {
-    var syntax  = editor.document.syntax;
     var options = {
       indent_char: editor.tabText.charAt(0),
       indent_size: editor.tabLength,
       indent_with_tabs: !!!editor.softTabs,
       eol: editor.document.eol,
     };
+    syntax  = syntax ? syntax : editor.document.syntax;
     
     switch (syntax) {
       case 'typescript':
@@ -110,13 +110,15 @@ exports.beautify = function (editor, ranges) {
         break;
     }
   });
+  editor.selectedRanges = [new Range(0, 0)];
 }
 
 
 
 // Invoked by the 'format' command
 nova.commands.register('beautify.format', (editor) => {
-  exports.beautify(editor, [new Range(0, editor.document.length)]);
+  var ranges = editor.selectedRange.length ? editor.selectedRanges.reverse() : [new Range(0, editor.document.length)];
+  exports.beautify(editor, ranges, null);
 });
 
 
@@ -124,5 +126,35 @@ nova.commands.register('beautify.format', (editor) => {
 // Invoked by the 'format selection' command
 nova.commands.register('beautify.formatSelection', (editor) => {
   exports.beautify(editor, editor.selectedRanges.reverse());
+});
+
+
+
+// Invoked by the 'format as js' command, automatically takes selected ranges 
+// (if the first range is not empty) and if not format the whole document
+nova.commands.register('beautify.formatAsJs', (editor) => {
+  var syntax = 'javascript';
+  var ranges = editor.selectedRange.length ? editor.selectedRanges.reverse() : [new Range(0, editor.document.length)];
+  exports.beautify(editor, ranges, syntax);
+});
+
+
+
+// Invoked by the 'format as css' command, automatically takes selected ranges 
+// (if the first range is not empty) and if not format the whole document
+nova.commands.register('beautify.formatAsCss', (editor) => {
+  var syntax = 'css';
+  var ranges = editor.selectedRange.length ? editor.selectedRanges.reverse() : [new Range(0, editor.document.length)];
+  exports.beautify(editor, ranges, syntax);
+});
+
+
+
+// Invoked by the 'format as html' command, automatically takes selected ranges 
+// (if the first range is not empty) and if not format the whole document
+nova.commands.register('beautify.formatAsHtml', (editor) => {
+  var syntax = 'html';
+  var ranges = editor.selectedRange.length ? editor.selectedRanges.reverse() : [new Range(0, editor.document.length)];
+  exports.beautify(editor, ranges, syntax);
 });
 

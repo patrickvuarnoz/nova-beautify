@@ -3,7 +3,7 @@
   "name": "Beautify",
   "organization": "Patrick A. Vuarnoz",
   "description": "Format Javascript, JSON, CSS, SCSS, LESS, HTML and XML using JS-Beautify.",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "categories": ["formatters", "commands"],
 
   "main": "main.js",
@@ -228,13 +228,25 @@
         }
       },
       {
-        "title": "Format selection",
-        "paletteTitle": "Format selection",
-        "command": "beautify.formatSelection",
-        "when": "editorHasFocus && editorHasSelection",
-        "filters": {
-          "syntaxes": ["javascript", "typescript", "json", "css", "less", "scss", "html", "xml"]
-        }
+        "separator": true 
+      },
+      {
+        "title": "Format as Javascript & JSON",
+        "paletteTitle": "Format as Javascript & JSON",
+        "command": "beautify.formatAsJs",
+        "when": "editorHasFocus"
+      },
+      {
+        "title": "Format as CSS, SCSS & LESS",
+        "paletteTitle": "Format as CSS, SCSS & LESS",
+        "command": "beautify.formatAsCss",
+        "when": "editorHasFocus"
+      },
+      {
+        "title": "Format as HTML & XML",
+        "paletteTitle": "Format as HTML & XML",
+        "command": "beautify.formatAsHtml",
+        "when": "editorHasFocus"
       }
     ]
   },
