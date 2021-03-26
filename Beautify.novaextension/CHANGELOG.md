@@ -1,3 +1,8 @@
+## Version 1.4.1
+
+* Automatic lowercasing of configuration option values (as expected by JS-Beautify)
+* Extension console logs configuration options used for formatting
+
 ## Version 1.4
 
 * Added commands to format as specific syntax
@@ -6,11 +11,11 @@
 
 ## Version 1.3
 
-* Added config options for 'add spaces around combinators' (CSS, SCSS & LESS)
+* Added config options for `add spaces around combinators` (CSS, SCSS & LESS)
 
 ## Version 1.2
 
-* Added config options for 'unformatted tags', 'unformatted content' and 'extra lines before' (HTML & XML)
+* Added config options for `unformatted tags`, `unformatted content` and `extra lines before` (HTML & XML)
 
 
 ## Version 1.1

@@ -21,7 +21,8 @@ formatting Javascript, JSON, CSS, SCSS, LESS, HTML and XML.
 
 ## Known issues
 
-* If some configuration options do not have an effect, try disabling the 'preserve existing line-breaks' option
+* If some configuration options do not have an effect, try disabling the `preserve existing line-breaks` and check other `preserve` options.
+* If some configuration options entered into text fields are not directly used, then this is due to a bug in Nova. You have to switch to another activated extension in the extension library (i.e. loose focus on the Beautify extension) before the values get updated. You can check which configuration options are being used by checking the extension console after formatting.
 
 ## Screenshots
 

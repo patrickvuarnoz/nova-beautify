@@ -57,6 +57,8 @@ exports.deactivate = function () {
 // Beautify the current selection
 exports.beautify = function (editor, ranges, syntax) {
   editor.edit(function (e) {
+    
+    // Init base options
     var options = {
       indent_char: editor.tabText.charAt(0),
       indent_size: editor.tabLength,
@@ -65,12 +67,14 @@ exports.beautify = function (editor, ranges, syntax) {
     };
     syntax  = syntax ? syntax : editor.document.syntax;
     
+    // Switch by syntax
     switch (syntax) {
       case 'typescript':
       case 'javascript':
       case 'json':
         for (option of configJs) {
           options[option] = nova.config.get('patrickvuarnoz.beautify.js.' + option);
+          options[option] = (typeof options[option] == 'string')?(options[option].toLowerCase()):(options[option]);
         }
         if (options.brace_style_preserve_inline) {
           options.brace_style += ',preserve-inline'; 
@@ -87,6 +91,7 @@ exports.beautify = function (editor, ranges, syntax) {
       case 'scss':
         for (option of configCss) {
           options[option] = nova.config.get('patrickvuarnoz.beautify.css.' + option);
+          options[option] = (typeof options[option] == 'string')?(options[option].toLowerCase()):(options[option]);
         }
         for (var range of ranges) {
           var text = editor.getTextInRange(range);
@@ -99,6 +104,7 @@ exports.beautify = function (editor, ranges, syntax) {
       case 'xml':
         for (option of configHtml) {
           options[option] = nova.config.get('patrickvuarnoz.beautify.html.' + option);
+          options[option] = (typeof options[option] == 'string')?(options[option].toLowerCase()):(options[option]);
         }
         options.wrap_line_length = 0;
         options.wrap_attributes_indent_size = options.wrap_attributes_indent_size ? options.indent_size : 0;
@@ -109,7 +115,12 @@ exports.beautify = function (editor, ranges, syntax) {
         }
         break;
     }
+    
+    // Output options (for debugging)
+    console.log('Options used for formatting ' + syntax + ':\n' + JSON.stringify(options, null, '\t'));
   });
+  
+  // Reset all ranges
   editor.selectedRanges = [new Range(0, 0)];
 }
 

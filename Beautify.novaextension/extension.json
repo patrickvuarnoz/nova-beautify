@@ -231,20 +231,20 @@
         "separator": true 
       },
       {
-        "title": "Format as Javascript & JSON",
-        "paletteTitle": "Format as Javascript & JSON",
+        "title": "Format as Javascript, JSON",
+        "paletteTitle": "Format as Javascript, JSON",
         "command": "beautify.formatAsJs",
         "when": "editorHasFocus"
       },
       {
-        "title": "Format as CSS, SCSS & LESS",
-        "paletteTitle": "Format as CSS, SCSS & LESS",
+        "title": "Format as CSS, SCSS, LESS",
+        "paletteTitle": "Format as CSS, SCSS, LESS",
         "command": "beautify.formatAsCss",
         "when": "editorHasFocus"
       },
       {
-        "title": "Format as HTML & XML",
-        "paletteTitle": "Format as HTML & XML",
+        "title": "Format as HTML, XML",
+        "paletteTitle": "Format as HTML, XML",
         "command": "beautify.formatAsHtml",
         "when": "editorHasFocus"
       }
