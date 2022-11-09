@@ -16,7 +16,8 @@
     "onLanguage:scss",
     "onLanguage:less",
     "onLanguage:xml",
-    "onLanguage:html"
+    "onLanguage:html",
+    "onLanguage:jinja-html"
   ],
 
   "entitlements": {
@@ -263,6 +264,12 @@
         {
           "key": "patrickvuarnoz.beautify.format_on_save.html",
           "title": "HTML",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "key": "patrickvuarnoz.beautify.format_on_save.jinja-html",
+          "title": "HTML (Jinja2)",
           "type": "boolean",
           "default": false
         },

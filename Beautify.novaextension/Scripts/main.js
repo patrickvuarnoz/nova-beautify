@@ -145,6 +145,7 @@ exports.beautify = function (editor, syntax) {
         break;
         
       case 'html':
+      case 'jinja-html':
       case 'xml':
         for (option of configHtml) {
           options[option] = nova.config.get('patrickvuarnoz.beautify.html.' + option);
