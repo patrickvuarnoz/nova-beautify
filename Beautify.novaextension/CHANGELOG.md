@@ -1,3 +1,8 @@
+## Version 1.5
+
+* Added format on save option
+* Updated JS-Beautify to 1.14.7
+
 ## Version 1.4.1
 
 * Automatic lowercasing of configuration option values (as expected by JS-Beautify)

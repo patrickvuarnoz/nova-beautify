@@ -1,7 +1,7 @@
 # Beautify for Nova
 
-Beautify integrates [JS-Beautify](https://github.com/beautify-web/js-beautify) into Nova for 
-formatting Javascript, JSON, CSS, SCSS, LESS, HTML and XML. 
+Beautify integrates [JS-Beautify](https://github.com/beautify-web/js-beautify) into Nova for
+formatting Javascript, Typescript, JSON, CSS, SCSS, LESS, HTML and XML.
 
 ## Configuration
 
@@ -9,7 +9,8 @@ formatting Javascript, JSON, CSS, SCSS, LESS, HTML and XML.
 * Indentation settings are inherited from the editor
 * Line endings are inherited from the open document
 * Other configuration options can be set as global preferences
-* Option to format selection or document as specific syntax
+* Option to format selection or whole document as specific syntax
+* Option to format on save, settable per syntax in global preferences
 
 ## Invoking
 

@@ -2,14 +2,21 @@
   "identifier": "patrickvuarnoz.beautify",
   "name": "Beautify",
   "organization": "Patrick A. Vuarnoz",
-  "description": "Format Javascript, JSON, CSS, SCSS, LESS, HTML and XML using JS-Beautify.",
+  "description": "Format Javascript, Typescript, JSON, CSS, SCSS, LESS, HTML and XML using JS-Beautify.",
   "version": "1.4.1",
   "categories": ["formatters", "commands"],
 
   "main": "main.js",
 
   "activationEvents": [
-
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:json",
+    "onLanguage:css",
+    "onLanguage:scss",
+    "onLanguage:less",
+    "onLanguage:xml",
+    "onLanguage:html"
   ],
 
   "entitlements": {
@@ -212,6 +219,60 @@
           "default": "head,body,/html"
         }
       ]
+    },
+    {
+      "title": "Format on save",
+      "type": "section",
+      "children": [
+        {
+          "key": "patrickvuarnoz.beautify.format_on_save.javascript",
+          "title": "Javascript",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "key": "patrickvuarnoz.beautify.format_on_save.typescript",
+          "title": "Typescript",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "key": "patrickvuarnoz.beautify.format_on_save.json",
+          "title": "JSON",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "key": "patrickvuarnoz.beautify.format_on_save.css",
+          "title": "CSS",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "key": "patrickvuarnoz.beautify.format_on_save.scss",
+          "title": "SCSS",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "key": "patrickvuarnoz.beautify.format_on_save.less",
+          "title": "LESS",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "key": "patrickvuarnoz.beautify.format_on_save.html",
+          "title": "HTML",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "key": "patrickvuarnoz.beautify.format_on_save.xml",
+          "title": "XML",
+          "type": "boolean",
+          "default": false
+        }
+      ]
     }
   ],
 
@@ -228,7 +289,7 @@
         }
       },
       {
-        "separator": true 
+        "separator": true
       },
       {
         "title": "Format as Javascript, JSON",
@@ -250,7 +311,7 @@
       }
     ]
   },
-
+  
   "bugs": "https://github.com/patrickvuarnoz/nova-beautify/issues",
   "repository": "https://github.com/patrickvuarnoz/nova-beautify",
   "funding": "https://paypal.me/patrickvuarnoz/1CHF"
