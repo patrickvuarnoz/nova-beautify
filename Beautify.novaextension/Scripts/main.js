@@ -1,5 +1,5 @@
 // Require js-beautify
-const beautifier = require('../Vendor/js-beautify/beautifier-1.14.7.min.js');
+const beautifier = require('../Vendor/js-beautify/beautifier-1.14.9.min.js');
 
 
 
@@ -137,6 +137,8 @@ exports.beautify = function (editor, syntax) {
       case 'css':
       case 'scss':
       case 'less':
+      case 'liquid-css':
+      case 'liquid-scss':
         for (option of configCss) {
           options[option] = nova.config.get('patrickvuarnoz.beautify.css.' + option);
           options[option] = (typeof options[option] == 'string')?(options[option].toLowerCase()):(options[option]);
@@ -146,6 +148,10 @@ exports.beautify = function (editor, syntax) {
         
       case 'html':
       case 'xml':
+      case 'html+ejs':
+      case 'html+erb':
+      case 'jinja-html':
+      case 'liquid-html':
         for (option of configHtml) {
           options[option] = nova.config.get('patrickvuarnoz.beautify.html.' + option);
           options[option] = (typeof options[option] == 'string')?(options[option].toLowerCase()):(options[option]);

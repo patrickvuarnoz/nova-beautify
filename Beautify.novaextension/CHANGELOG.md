@@ -1,3 +1,21 @@
+## Version 1.7.2
+
+* Updated JS-Beautify to 1.14.9
+
+## Version 1.7.1
+
+* Updated JS-Beautify to 1.14.9
+
+## Version 1.7
+
+* Updated JS-Beautify to 1.14.8
+
+## Version 1.6
+
+* Added (experimental) support for `HTML (EJS)` and `HTML (ERB)`
+* Added (experimental) support for `HTML (Jinja2)`, see [Jinja2 Nova Extension](nova://extension/?id=jgfeatures.Jinja2&name=Jinja2)
+* Added (experimental) support for `HTML (Liquid)`, `CSS (Liquid)`, `SCSS (Liquid)`, see [Liquid Nova Extension](nova://extension/?id=me.arthr.Liquid&name=Liquid)
+
 ## Version 1.5
 
 * Added format on save option

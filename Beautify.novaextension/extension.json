@@ -3,7 +3,7 @@
   "name": "Beautify",
   "organization": "Patrick A. Vuarnoz",
   "description": "Format Javascript, Typescript, JSON, CSS, SCSS, LESS, HTML and XML using JS-Beautify.",
-  "version": "1.5",
+  "version": "1.7.2",
   "categories": ["formatters", "commands"],
 
   "main": "main.js",
@@ -12,11 +12,19 @@
     "onLanguage:javascript",
     "onLanguage:typescript",
     "onLanguage:json",
+    
     "onLanguage:css",
     "onLanguage:scss",
     "onLanguage:less",
+    "onLanguage:liquid-css",
+    "onLanguage:liquid-scss",
+    
     "onLanguage:xml",
-    "onLanguage:html"
+    "onLanguage:html",
+    "onLanguage:html+ejs",
+    "onLanguage:html+erb",
+    "onLanguage:jinja-html",
+    "onLanguage:liquid-html"
   ],
 
   "entitlements": {
@@ -224,6 +232,7 @@
       "title": "Format on save",
       "type": "section",
       "children": [
+        
         {
           "key": "patrickvuarnoz.beautify.format_on_save.javascript",
           "title": "Javascript",
@@ -242,9 +251,16 @@
           "type": "boolean",
           "default": false
         },
+        
         {
           "key": "patrickvuarnoz.beautify.format_on_save.css",
           "title": "CSS",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "key": "patrickvuarnoz.beautify.format_on_save.liquid-css",
+          "title": "CSS (Liquid)",
           "type": "boolean",
           "default": false
         },
@@ -255,14 +271,45 @@
           "default": false
         },
         {
+          "key": "patrickvuarnoz.beautify.format_on_save.liquid-scss",
+          "title": "SCSS (Liquid)",
+          "type": "boolean",
+          "default": false
+        },
+        {
           "key": "patrickvuarnoz.beautify.format_on_save.less",
           "title": "LESS",
           "type": "boolean",
           "default": false
         },
+        
         {
           "key": "patrickvuarnoz.beautify.format_on_save.html",
           "title": "HTML",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "key": "patrickvuarnoz.beautify.format_on_save.html+ejs",
+          "title": "HTML (EJS)",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "key": "patrickvuarnoz.beautify.format_on_save.html+erb",
+          "title": "HTML (ERB)",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "key": "patrickvuarnoz.beautify.format_on_save.jinja-html",
+          "title": "HTML (Jinja2)",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "key": "patrickvuarnoz.beautify.format_on_save.liquid-html",
+          "title": "HTML (Liquid)",
           "type": "boolean",
           "default": false
         },
@@ -285,7 +332,24 @@
         "shortcut": "opt-shift-f",
         "when": "editorHasFocus",
         "filters": {
-          "syntaxes": ["javascript", "typescript", "json", "css", "less", "scss", "html", "xml"]
+          "syntaxes": [
+            "javascript",
+            "typescript",
+            "json",
+            
+            "css",
+            "less",
+            "scss",
+            "liquid-css",
+            "liquid-scss",
+            
+            "html",
+            "xml",
+            "html+ejs",
+            "html+erb",
+            "jinja-html",
+            "liquid-html"
+          ]
         }
       },
       {
