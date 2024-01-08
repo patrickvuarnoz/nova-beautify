@@ -1,3 +1,7 @@
+## Version 1.7.3
+
+* Updated JS-Beautify to 1.14.11
+
 ## Version 1.7.2
 
 * Updated JS-Beautify to 1.14.9
