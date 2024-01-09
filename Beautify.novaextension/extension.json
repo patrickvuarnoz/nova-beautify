@@ -3,7 +3,7 @@
   "name": "Beautify",
   "organization": "Patrick A. Vuarnoz",
   "description": "Format Javascript, Typescript, JSON, CSS, SCSS, LESS, HTML and XML using JS-Beautify.",
-  "version": "1.7.3",
+  "version": "1.8",
   "categories": ["formatters", "commands"],
 
   "main": "main.js",
@@ -106,6 +106,12 @@
           "default": false
         },
         {
+          "key": "patrickvuarnoz.beautify.js.indent_empty_lines",
+          "title": "Indent empty lines",
+          "type": "boolean",
+          "default": false
+        },
+        {
           "key": "patrickvuarnoz.beautify.js.keep_array_indentation",
           "title": "Preserve array indentation",
           "type": "boolean",
@@ -116,6 +122,23 @@
           "title": "Preserve existing line-breaks",
           "type": "boolean",
           "default": true
+        },
+        {
+          "key": "patrickvuarnoz.beautify.js.max_preserve_newlines",
+          "title": "Max. pres. line-breaks",
+          "description": "Only applicable if 'preserve existing line-breaks' is enabled",
+          "type": "number",
+          "min": 1,
+          "default": 10
+        },
+        {
+          "key": "patrickvuarnoz.beautify.js.operator_position",
+          "title": "Operator position",
+          "description": "Only applicable if 'preserve existing line-breaks' is enabled",
+          "type": "enum",
+          "radio": false,
+          "values": ["before-newline", "after-newline", "preserve-newline"],
+          "default": "before-newline"
         }
       ]
     },
@@ -151,10 +174,24 @@
           "default": true
         },
         {
+          "key": "patrickvuarnoz.beautify.css.indent_empty_lines",
+          "title": "Indent empty lines",
+          "type": "boolean",
+          "default": false
+        },
+        {
           "key": "patrickvuarnoz.beautify.css.preserve_newlines",
           "title": "Preserve existing line-breaks",
           "type": "boolean",
           "default": true
+        },
+        {
+          "key": "patrickvuarnoz.beautify.css.max_preserve_newlines",
+          "title": "Max. pres. line-breaks",
+          "description": "Only applicable if 'preserve existing line-breaks' is enabled",
+          "type": "number",
+          "min": 1,
+          "default": 10
         }
       ]
     },
@@ -200,10 +237,24 @@
           "default": false
         },
         {
+          "key": "patrickvuarnoz.beautify.html.indent_empty_lines",
+          "title": "Indent empty lines",
+          "type": "boolean",
+          "default": false
+        },
+        {
           "key": "patrickvuarnoz.beautify.html.preserve_newlines",
           "title": "Preserve existing line-breaks",
           "type": "boolean",
           "default": true
+        },
+        {
+          "key": "patrickvuarnoz.beautify.html.max_preserve_newlines",
+          "title": "Max. pres. line-breaks",
+          "description": "Only applicable if 'preserve existing line-breaks' is enabled",
+          "type": "number",
+          "min": 1,
+          "default": 10
         },
         {
           "key": "patrickvuarnoz.beautify.html.unformatted",

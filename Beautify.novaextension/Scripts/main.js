@@ -18,6 +18,9 @@ const configJs = [
   'comma_first',
   'keep_array_indentation',
   'preserve_newlines',
+  'indent_empty_lines',
+  'operator_position',
+  'max_preserve_newlines',
 ];
 const configCss = [
   'brace_style',
@@ -25,6 +28,8 @@ const configCss = [
   'newline_between_rules',
   'preserve_newlines',
   'space_around_combinator',
+  'indent_empty_lines',
+  'max_preserve_newlines',
 ];
 const configHtml = [
   'brace_style',
@@ -33,9 +38,11 @@ const configHtml = [
   'indent_scripts',
   'indent_inner_html',
   'preserve_newlines',
+  'indent_empty_lines',
   'unformatted',
   'content_unformatted',
   'extra_liners',
+  'max_preserve_newlines',
 ];
 
 
