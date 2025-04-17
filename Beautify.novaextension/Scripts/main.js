@@ -1,5 +1,5 @@
 // Require js-beautify
-const beautifier = require('../Vendor/js-beautify/beautifier-1.14.11.min.js');
+const beautifier = require('../Vendor/js-beautify/beautifier-1.15.3.min.js');
 
 
 

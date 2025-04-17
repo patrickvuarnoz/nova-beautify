@@ -1,3 +1,9 @@
+## Version 1.8.1
+
+* Updated JS-Beautify to 1.15.3
+
+
+
 ## Version 1.8
 
 * Added config options for `indent empty lines` and `max. preserved line-breaks` (all)
